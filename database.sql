@@ -1,0 +1,1 @@
+create database belajar_spring_data_jpa;
