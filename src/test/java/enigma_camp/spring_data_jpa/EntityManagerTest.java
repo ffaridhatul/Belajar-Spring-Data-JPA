@@ -5,9 +5,11 @@ import jakarta.persistence.EntityManagerFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+@SpringBootTest
 public class EntityManagerTest {
 
     @Autowired
@@ -15,7 +17,7 @@ public class EntityManagerTest {
 
     @Test
     void testEntityManagerFactory() {
-        Assertions.assertNull(entityManagerFactory);
+        Assertions.assertNotNull(entityManagerFactory);
 
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         Assertions.assertNotNull(entityManager);
