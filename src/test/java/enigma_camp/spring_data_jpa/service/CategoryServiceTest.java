@@ -27,4 +27,11 @@ class CategoryServiceTest {
         });
     }
 
+    @Test
+    void programmatic() {
+        assertThrows(RuntimeException.class, () -> {
+            categoryService.createCategories();
+        });
+    }
+
 }
