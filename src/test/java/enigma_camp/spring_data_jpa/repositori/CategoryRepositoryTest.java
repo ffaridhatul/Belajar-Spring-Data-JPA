@@ -28,12 +28,12 @@ class CategoryRepositoryTest {
         Category category = categoryRepository.findById(1L).orElse(null);
         assertNotNull(category);
 
-        category.setName("Masakan Padang");
+        category.setName("Masakan Minang");
         categoryRepository.save(category);
 
         category = categoryRepository.findById(1L).orElse(null);
         assertNotNull(category);
-        assertEquals("Masakan Padang", category.getName());
+        assertEquals("Masakan Minang", category.getName());
 
     }
 }
