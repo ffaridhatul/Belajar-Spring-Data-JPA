@@ -13,4 +13,10 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
 
     //Where name like ?
     List<Category> findALlByNameLike(String name);
+
+    Long countByName(String name);
+
+    boolean existsByName(String name);
+
+    int deleteByName(String name);
 }
