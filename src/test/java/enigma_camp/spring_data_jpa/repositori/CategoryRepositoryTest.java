@@ -36,4 +36,16 @@ class CategoryRepositoryTest {
         assertEquals("Masakan Minang", category.getName());
 
     }
+
+    @Test
+    void audit() {
+        Category category = new Category();
+        category.setName("Sample Audit");
+        categoryRepository.save(category);
+
+        assertNotNull(category.getId());
+        assertNotNull(category.getCratedAt());
+        assertNotNull(category.getLastModifiedDate());
+
+    }
 }
